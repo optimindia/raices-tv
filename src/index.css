@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-obsidian text-ivory font-sans antialiased selection:bg-dominican-blue/30 selection:text-white overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate/40 backdrop-blur-md border border-white/5 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-slate/30 backdrop-blur-sm border border-white/10 rounded-2xl md:rounded-[2rem] shadow-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-ivory via-ivory to-white/50;
+  }
+
+  /* Dominican Glow Effects */
+  .glow-blue {
+    @apply relative;
+  }
+  .glow-blue::before {
+    @apply content-[''] absolute -inset-1 bg-dominican-blue/20 blur-xl z-0 pointer-events-none rounded-inherit mix-blend-screen;
+    border-radius: inherit;
+  }
+
+  .glow-red {
+    @apply relative;
+  }
+  .glow-red::before {
+    @apply content-[''] absolute -inset-1 bg-dominican-red/20 blur-xl z-0 pointer-events-none rounded-inherit mix-blend-screen;
+    border-radius: inherit;
+  }
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1D4ED8;
+}
