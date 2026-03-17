@@ -23,25 +23,29 @@ export default function Footer() {
 
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-sans font-bold tracking-tight mb-6 text-white text-balance">
-              ¡Dímelo!, ¿listo pa' meterte <br className="hidden md:block"/> en <span className="font-serif italic text-dominican-blue">el bolsillo la mejor TV?</span>
+              ¿Todavía sin tu <br className="hidden md:block"/> <span className="font-serif italic text-dominican-blue">TV dominicana?</span>
             </h2>
             <p className="text-lg text-white/60 mb-10 max-w-2xl mx-auto text-balance">
-              Déjate de adivinar. Únete al corillo que ya está gozando su televisión RD VIP sin coger pique.
+              Pruébala GRATIS 24 horas. Sin tarjeta de crédito. Sin compromiso. Si no te encanta, no pagas nada.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button 
-                onClick={() => scrollTo('pricing')} 
+                onClick={() => {
+                  const msg = encodeURIComponent('¡Hola! Quiero activar mi prueba gratis de 24 horas de Raíces TV.');
+                  window.open(`https://wa.me/18095551234?text=${msg}`, '_blank');
+                }}
                 className="group/btn relative overflow-hidden w-full sm:w-auto px-8 py-4 bg-white text-obsidian rounded-2xl font-bold hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-[0_0_50px_rgba(255,255,255,0.25)] flex items-center justify-center gap-2"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-black/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-out" />
-                <span className="relative z-10 text-lg">Coronar Un Plan 🇩🇴</span>
+                <MessageCircle size={20} className="relative z-10" />
+                <span className="relative z-10 text-lg">Activar Prueba Gratis</span>
                 <ArrowRight size={20} className="relative z-10 group-hover/btn:translate-x-1 transition-transform" />
               </button>
               <button 
-                onClick={() => scrollTo('features')} 
+                onClick={() => scrollTo('pricing')} 
                 className="group/btn2 w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white hover:bg-white/5 transition-all text-lg rounded-2xl flex items-center justify-center font-medium hover:scale-105 active:scale-95"
               >
-                Saber Más
+                Ver Planes y Precios
               </button>
             </div>
           </div>

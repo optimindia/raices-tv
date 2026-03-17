@@ -10,44 +10,44 @@ const PLANS = [
     name: 'El Menor',
     price: '$9.99',
     period: '/mes',
-    description: "Pa' resolver al paso, sin volverte loco y ver lo tuyo.",
+    description: 'Para empezar a disfrutar tus canales favoritos sin complicaciones.',
     features: [
       '1 Pantalla en HD',
-      'Canales Nacionales Dominicanos',
-      'Soporte estándar WhatsApp'
+      '80+ Canales Dominicanos',
+      'Soporte por WhatsApp'
     ],
     popular: false,
-    cta: 'Meter Mano',
+    cta: 'Empezar Ahora',
   },
   {
     name: 'El Tíguere',
     price: '$14.99',
     period: '/mes',
-    description: "El verdadero flow pa' los que saben coronar con la mejor TV.",
+    description: 'El más popular. Ideal para familias que quieren verlo todo.',
     features: [
-      '3 Pantallas simultáneas (HD+)',
-      'Cines, Series y VIP Dominicano',
-      'Películas y Flow Picante',
+      '3 Pantallas simultáneas HD+',
+      '100+ Canales + Películas',
+      'Lidom y Deportes en Vivo',
       'Cero frizeo garantizado',
-      'Soporte Prioritario de una vez'
+      'Soporte Prioritario WhatsApp'
     ],
     popular: true,
-    cta: 'Comprar y Coronar',
+    cta: 'Elegir Tíguere',
   },
   {
     name: 'El Patrón',
     price: '$24.99',
     period: '/mes',
-    description: "Pa' ti que exiges respeto y lo quieres to' nítido 4K.",
+    description: 'Todo en 4K Ultra HD. La experiencia completa sin límites.',
     features: [
       '4 Pantallas en 4K Ultra HD',
-      'Taquilla completa sin muela',
-      'Pelota Invernal y PPV Premium',
-      'Conexión al palo sin delay',
-      'Soporte 24/7 sin coger lucha'
+      '100+ Canales + Taquilla Completa',
+      'Lidom + PPV + Series Premium',
+      'Conexión prioritaria sin delay',
+      'Soporte 24/7 dedicado'
     ],
     popular: false,
-    cta: 'Ser El Patrón',
+    cta: 'Elegir Patrón',
   }
 ];
 
@@ -89,11 +89,16 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="text-center mb-16 relative z-10">
+          {/* Free Trial Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-sm font-semibold text-emerald-400">🎁 Prueba 24 horas GRATIS — Sin tarjeta de crédito</span>
+          </div>
           <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4 text-balance">
-            Compra y Vende Hoy, <span className="text-gradient-dominican font-serif italic text-4xl">De Lo Mío.</span>
+            Elige Tu Plan. <span className="text-gradient-dominican font-serif italic text-4xl">Sin Contratos. Cancela Cuando Quieras.</span>
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto">
-            Arma tu coro sin pagar de más. Cero contratos ocultos, cero muela. Tú decides la grasa que te metes al bolsillo.
+            Planes simples y claros. Paga mensual con tarjeta o Zelle. Sin costos ocultos ni letras chiquitas.
           </p>
         </div>
 

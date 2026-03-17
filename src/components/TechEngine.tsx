@@ -1,25 +1,57 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Server, Globe, Zap } from 'lucide-react';
+import { CreditCard, MessageCircle, Tv, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const STEPS = [
+  {
+    icon: CreditCard,
+    step: '01',
+    title: 'Elige Tu Plan',
+    description: 'Escoge entre 3 planes simples. Desde $9.99/mes. Sin contratos, sin letra chiquita. Cancela cuando quieras.',
+    color: 'text-dominican-blue',
+    bg: 'bg-dominican-blue/15',
+    border: 'border-dominican-blue/20',
+    glow: 'bg-dominican-blue/10',
+  },
+  {
+    icon: MessageCircle,
+    step: '02',
+    title: 'Te Activamos por WhatsApp',
+    description: 'Escríbenos y en menos de 5 minutos estás listo. Te guiamos paso a paso en la instalación. Cero estrés.',
+    color: 'text-champagne',
+    bg: 'bg-champagne/15',
+    border: 'border-champagne/20',
+    glow: 'bg-champagne/10',
+  },
+  {
+    icon: Tv,
+    step: '03',
+    title: '¡A Gozar Tu TV!',
+    description: 'Abre la app en tu Smart TV, celular o laptop y disfruta 100+ canales dominicanos en vivo. Así de fácil.',
+    color: 'text-dominican-red',
+    bg: 'bg-dominican-red/15',
+    border: 'border-dominican-red/20',
+    glow: 'bg-dominican-red/10',
+  },
+];
 
 export default function TechEngine() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Desktop nodes
-      const desktopNodes = gsap.utils.toArray<HTMLElement>('.tech-node-desktop');
-      desktopNodes.forEach((node, i) => {
+      const nodes = gsap.utils.toArray<HTMLElement>('.step-card');
+      nodes.forEach((node, i) => {
         gsap.fromTo(node,
-          { scale: 0.5, opacity: 0, y: 40 },
+          { y: 60, opacity: 0, scale: 0.95 },
           {
-            scale: 1, opacity: 1, y: 0,
+            y: 0, opacity: 1, scale: 1,
             duration: 1,
             delay: i * 0.2,
-            ease: 'elastic.out(1, 0.75)',
+            ease: 'power3.out',
             scrollTrigger: {
               trigger: containerRef.current,
               start: 'top 80%',
@@ -28,178 +60,80 @@ export default function TechEngine() {
           }
         );
       });
-
-      // Mobile nodes
-      const mobileNodes = gsap.utils.toArray<HTMLElement>('.tech-node-mobile');
-      mobileNodes.forEach((node, i) => {
-        gsap.fromTo(node,
-          { x: -30, opacity: 0 },
-          {
-            x: 0, opacity: 1,
-            duration: 0.7,
-            delay: i * 0.12,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: 'top 85%',
-              toggleActions: 'play none none none',
-            }
-          }
-        );
-      });
-      
-      gsap.fromTo('.connection-line', 
-        { strokeDashoffset: 1000 },
-        { strokeDashoffset: 0, duration: 2.5, ease: 'none', repeat: -1 }
-      );
-
-      gsap.to('.core-glow', {
-        scale: 1.2,
-        opacity: 0.8,
-        duration: 1.5,
-        yoyo: true,
-        repeat: -1,
-        ease: 'sine.inOut'
-      });
-
     }, containerRef);
     return () => ctx.revert();
   }, []);
 
+  const openWhatsApp = () => {
+    const msg = encodeURIComponent('¡Hola! Quiero activar mi prueba gratis de 24 horas de Raíces TV.');
+    window.open(`https://wa.me/18095551234?text=${msg}`, '_blank');
+  };
+
   return (
     <section id="stability" ref={containerRef} className="py-24 relative overflow-hidden bg-obsidian">
-      {/* Epic Neon Palms Background */}
+      {/* Subtle Neon Palms Background */}
       <div 
-        className="absolute inset-0 opacity-20 pointer-events-none mix-blend-screen z-0"
+        className="absolute inset-0 opacity-10 pointer-events-none mix-blend-screen z-0"
         style={{
           backgroundImage: 'url("/images/rd_palms_neon.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center bottom',
-          maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)'
+          maskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)'
         }}
       />
-      
       <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian z-0" />
 
-      <div className="max-w-7xl mx-auto px-6 mb-16 text-center relative z-10">
-        <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4">
-          Nuestra Grasa <span className="text-gradient-dominican font-serif italic text-4xl">Tecnológica.</span>
-        </h2>
-        <p className="text-white/70 max-w-2xl mx-auto text-lg">
-          Cero mareo. Tenemos túneles directos desde Norteamérica hasta RD pa' que la señal te llegue nítida, sin intermediarios ni macos.
-        </p>
-      </div>
-
-      {/* MOBILE: Vertical card layout */}
-      <div className="md:hidden max-w-sm mx-auto px-6 relative z-10">
-        <div className="flex flex-col items-center gap-4">
-          <div className="tech-node-mobile flex items-center gap-4 w-full glass-card p-5 border-dominican-blue/20">
-            <div className="w-14 h-14 rounded-xl bg-dominican-blue/15 flex items-center justify-center shrink-0 border border-dominican-blue/20">
-              <Globe size={26} className="text-dominican-blue" />
-            </div>
-            <div>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-white/60">US-EAST-1</span>
-              <div className="font-semibold text-white text-lg">New York</div>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center gap-0.5">
-            <div className="w-0.5 h-6 bg-gradient-to-b from-dominican-blue to-transparent rounded-full" />
-            <div className="w-3 h-3 rounded-full bg-white animate-bounce shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
-            <div className="w-0.5 h-6 bg-gradient-to-b from-transparent to-champagne rounded-full" />
-          </div>
-
-          <div className="tech-node-mobile flex items-center gap-4 w-full glass-card p-5 border-champagne/20 relative overflow-hidden">
-            <div className="core-glow absolute inset-0 bg-champagne/5 blur-xl pointer-events-none" />
-            <div className="w-14 h-14 rounded-full bg-obsidian border border-white/20 flex items-center justify-center shrink-0 relative z-10 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
-              <Zap size={26} className="text-white" />
-            </div>
-            <div className="relative z-10">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-champagne">LA MAQUINA</span>
-              <div className="font-semibold text-white text-lg">El Patrón Core</div>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center gap-0.5">
-            <div className="w-0.5 h-6 bg-gradient-to-b from-champagne to-transparent rounded-full" />
-            <div className="w-3 h-3 rounded-full bg-white animate-bounce shadow-[0_0_10px_rgba(255,255,255,0.5)]" style={{ animationDelay: '0.3s' }} />
-            <div className="w-0.5 h-6 bg-gradient-to-b from-transparent to-dominican-red rounded-full" />
-          </div>
-
-          <div className="tech-node-mobile flex items-center gap-4 w-full glass-card p-5 border-dominican-red/20">
-            <div className="w-14 h-14 rounded-xl bg-dominican-red/15 flex items-center justify-center shrink-0 border border-dominican-red/20">
-              <Server size={26} className="text-dominican-red" />
-            </div>
-            <div>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-white/60">DO-SDQ-1</span>
-              <div className="font-semibold text-white text-lg">Santo Domingo</div>
-            </div>
-          </div>
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4">
+            Actívate en <span className="text-gradient-dominican font-serif italic">3 Pasos.</span>
+          </h2>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">
+            Sin instalaciones complicadas. Sin esperas. Desde tu sofá en 5 minutos.
+          </p>
         </div>
-      </div>
 
-      {/* DESKTOP: SVG Animation */}
-      <div className="hidden md:block relative max-w-5xl mx-auto h-96 pointer-events-none">
-        <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1000 400">
-          <defs>
-            <linearGradient id="conn-blue" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#002D62" stopOpacity="0.3" />
-              <stop offset="50%" stopColor="#002D62" stopOpacity="1" />
-              <stop offset="100%" stopColor="#CE1126" stopOpacity="0.3" />
-            </linearGradient>
-            <linearGradient id="conn-red" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#CE1126" stopOpacity="0.3" />
-              <stop offset="50%" stopColor="#CE1126" stopOpacity="1" />
-              <stop offset="100%" stopColor="#002D62" stopOpacity="0.3" />
-            </linearGradient>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {STEPS.map((step, i) => {
+            const Icon = step.icon;
+            return (
+              <div key={i} className={`step-card glass-card p-8 relative overflow-hidden group border-white/10 hover:${step.border} transition-all duration-500 hover:-translate-y-1`}>
+                <div className={`absolute top-0 right-0 w-48 h-48 ${step.glow} blur-[80px] rounded-full group-hover:w-64 group-hover:h-64 transition-all`} />
+                
+                <div className="relative z-10">
+                  <div className={`text-6xl font-bold ${step.color} opacity-20 font-mono mb-4`}>{step.step}</div>
+                  <div className={`w-14 h-14 rounded-2xl ${step.bg} ${step.color} flex items-center justify-center mb-6 border ${step.border}`}>
+                    <Icon size={28} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{step.description}</p>
+                </div>
 
-          <path className="connection-line" d="M150 200 C300 100, 700 100, 850 200" fill="none" stroke="url(#conn-blue)" strokeWidth="3" strokeDasharray="10 15" filter="url(#glow)" />
-          <path className="connection-line" d="M150 200 C300 300, 700 300, 850 200" fill="none" stroke="url(#conn-red)" strokeWidth="3" strokeDasharray="10 15" filter="url(#glow)" />
-          <path className="connection-line" d="M150 200 L500 200 L850 200" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1" strokeDasharray="5 5" />
-          
-          <circle r="4" fill="#fff" filter="url(#glow)">
-            <animateMotion dur="3s" repeatCount="indefinite" path="M150 200 C300 100, 700 100, 850 200" />
-          </circle>
-          <circle r="4" fill="#fff" filter="url(#glow)">
-            <animateMotion dur="4s" repeatCount="indefinite" path="M150 200 C300 300, 700 300, 850 200" />
-          </circle>
-          <circle r="3" fill="#002D62" filter="url(#glow)">
-            <animateMotion dur="2.5s" repeatCount="indefinite" path="M150 200 L500 200 L850 200" />
-          </circle>
-        </svg>
+                {/* Connector Arrow (hide on last and mobile) */}
+                {i < 2 && (
+                  <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20">
+                    <ArrowRight size={24} className="text-white/20" />
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
 
-        <div className="absolute inset-0 flex items-center justify-between px-10 md:px-20 z-10 w-full">
-          <div className="tech-node-desktop flex flex-col items-center">
-            <div className="w-20 h-20 rounded-2xl glass-panel flex items-center justify-center p-0 mb-4 border-dominican-blue/30 shadow-[0_0_30px_rgba(0,45,98,0.2)]">
-              <Globe size={32} className="text-dominican-blue" />
-            </div>
-            <span className="font-mono text-xs uppercase tracking-widest text-white/60">US-EAST-1</span>
-            <span className="text-sm font-semibold text-white">New York</span>
-          </div>
-
-          <div className="tech-node-desktop flex flex-col items-center mt-[-4rem]">
-            <div className="w-24 h-24 rounded-full bg-obsidian border border-white/20 flex items-center justify-center mb-4 relative z-10 shadow-[0_0_50px_rgba(255,255,255,0.05)]">
-              <div className="core-glow absolute inset-0 rounded-full bg-champagne/10 blur-xl pointer-events-none" />
-              <div className="absolute inset-0 rounded-full border border-white/10 animate-[ping_3s_ease-out_infinite]" />
-              <Zap size={40} className="text-white" />
-            </div>
-            <span className="font-mono text-xs uppercase tracking-widest text-champagne">El Patrón Core</span>
-          </div>
-
-          <div className="tech-node-desktop flex flex-col items-center">
-            <div className="w-20 h-20 rounded-2xl glass-panel flex items-center justify-center p-0 mb-4 border-dominican-red/30 shadow-[0_0_30px_rgba(206,17,38,0.2)]">
-              <Server size={32} className="text-dominican-red" />
-            </div>
-            <span className="font-mono text-xs uppercase tracking-widest text-white/60">DO-SDQ-1</span>
-            <span className="text-sm font-semibold text-white">Santo Domingo</span>
+        {/* Mini CTA */}
+        <div className="text-center">
+          <button 
+            onClick={openWhatsApp}
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-dominican-blue to-dominican-red text-white rounded-2xl font-bold hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(206,17,38,0.3)] hover:shadow-[0_0_50px_rgba(206,17,38,0.5)] text-lg"
+          >
+            <MessageCircle size={20} />
+            Activar por WhatsApp
+          </button>
+          <div className="flex items-center justify-center gap-4 mt-4 text-white/40 text-sm">
+            <div className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-500" /> Gratis 24h</div>
+            <div className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-500" /> Sin tarjeta</div>
+            <div className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-500" /> 5 min setup</div>
           </div>
         </div>
       </div>

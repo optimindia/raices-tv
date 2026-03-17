@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     q: '¿Puedo compartir mi cuenta con mi familia?',
-    a: 'Sí. El plan "El Tíguere" permite 3 pantallas simultáneas y "El Jefe" permite 4 pantallas en 4K. Cada miembro de la familia puede ver un canal diferente al mismo tiempo, en dispositivos diferentes.',
+    a: 'Sí. El plan "El Tíguere" permite 3 pantallas simultáneas y "El Patrón" permite 4 pantallas en 4K. Cada miembro de la familia puede ver un canal diferente al mismo tiempo, en dispositivos diferentes.',
   },
   {
     q: '¿Qué canales dominicanos están incluidos?',
@@ -67,13 +67,13 @@ export default function FAQ() {
         <div className="text-center mb-16 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-dominican-blue/20 bg-dominican-blue/5">
             <HelpCircle size={14} className="text-dominican-blue" />
-            <span className="text-xs font-mono text-white/60 uppercase tracking-widest">¿Qué Lo Qué Con Raíces?</span>
+            <span className="text-xs font-mono text-white/60 uppercase tracking-widest">Preguntas Frecuentes</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4 text-balance">
-            Cero mareo. Todo al claro, <span className="font-serif italic text-dominican-blue">como debe ser.</span>
+            Todo Claro Antes De <span className="font-serif italic text-dominican-blue">Decidirte.</span>
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto">
-            Las dudas más comunes resueltas al instante. Si sigues embotellado, tíranos por WhatsApp que te resolvemos de una.
+            Las dudas más comunes resueltas al instante. ¿Algo más? Escríbenos por WhatsApp.
           </p>
         </div>
 

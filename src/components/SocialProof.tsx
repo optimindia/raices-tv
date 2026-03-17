@@ -15,7 +15,7 @@ export default function SocialProof() {
     <section className="py-12 border-y border-white/5 bg-black/20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-6 text-center">
         <p className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-dominican-blue to-dominican-red font-mono tracking-widest uppercase">
-          EL CORILLO QUE YA ESTÁ CORONANDO CON NOSOTROS 🇩🇴
+          MÁS DE 100 CANALES DOMINICANOS EN VIVO 🇩🇴
         </p>
       </div>
 

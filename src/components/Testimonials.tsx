@@ -19,7 +19,7 @@ const TESTIMONIALS = [
     location: 'Lawrence, MA',
     text: 'Llevo 12 años fuera y por fin puedo ver los juegos de Lidom como si estuviera en el estadio. Cero frizeo, incluso con 3 pantallas a la vez.',
     rating: 5,
-    plan: 'El Jefe',
+    plan: 'El Patrón',
     avatar: 'CP',
   },
   {
@@ -35,7 +35,7 @@ const TESTIMONIALS = [
     location: 'Miami, FL',
     text: 'Probé como 4 servicios antes. Este es el único que no se cae los fines de semana cuando todo el mundo está conectado. Recomendado 100%.',
     rating: 5,
-    plan: 'El Básico',
+    plan: 'El Menor',
     avatar: 'JD',
   },
   {
@@ -43,7 +43,7 @@ const TESTIMONIALS = [
     location: 'The Bronx, NY',
     text: 'El soporte por WhatsApp es increíble. Tuve un problema a las 11pm y me respondieron en 5 minutos. Eso no se ve en ningún lado.',
     rating: 5,
-    plan: 'El Jefe',
+    plan: 'El Patrón',
     avatar: 'LT',
   },
   {

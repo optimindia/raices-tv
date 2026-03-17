@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Play } from 'lucide-react';
+import { Play, ArrowRight, Zap } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,11 +15,9 @@ export default function Hero() {
     const { clientX, clientY } = e;
     const { innerWidth, innerHeight } = window;
     
-    // Calculate normalized position (-1 to 1)
     const xPos = (clientX / innerWidth) * 2 - 1;
     const yPos = (clientY / innerHeight) * 2 - 1;
 
-    // Apply subtle parallax to typography
     gsap.to('.hero-reveal', {
       x: xPos * 10,
       y: yPos * 10,
@@ -27,30 +25,12 @@ export default function Hero() {
       ease: 'power2.out'
     });
 
-    // Apply more pronounced parallax to 3D Mockup
     gsap.to(mockupRef.current, {
-      x: xPos * -30, // Move opposite to mouse
+      x: xPos * -30,
       y: yPos * -30,
       rotationY: xPos * 5,
       duration: 1.5,
       ease: 'power3.out'
-    });
-
-    // Animate floating images
-    gsap.to('.hero-floating', {
-      x: xPos * 40,
-      y: yPos * 40,
-      rotation: xPos * 10,
-      duration: 2,
-      ease: 'power2.out'
-    });
-
-    gsap.to('.hero-floating-reverse', {
-      x: xPos * -60,
-      y: yPos * -60,
-      rotation: yPos * -15,
-      duration: 2.5,
-      ease: 'power2.out'
     });
   };
 
@@ -64,9 +44,13 @@ export default function Hero() {
     }
   };
 
+  const openWhatsApp = () => {
+    const msg = encodeURIComponent('¡Hola! Quiero activar mi prueba gratis de 24 horas de Raíces TV.');
+    window.open(`https://wa.me/18095551234?text=${msg}`, '_blank');
+  };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Aggressive Text Splitting / Scaling Reveal for more impact
       gsap.fromTo('.hero-reveal',
         { scale: 1.2, y: 80, opacity: 0 },
         {
@@ -78,7 +62,6 @@ export default function Hero() {
         }
       );
 
-      // 3D Mockup Entrance with extreme perspective initially
       gsap.fromTo(mockupRef.current, 
         { 
           y: 150, 
@@ -97,7 +80,6 @@ export default function Hero() {
           ease: 'power4.out',
           delay: 0.5,
           onComplete: () => {
-             // Continuous floating effect after entrance
              gsap.to(mockupRef.current, {
                y: "-=15",
                rotationX: "+=2",
@@ -110,7 +92,6 @@ export default function Hero() {
         }
       );
 
-      // ScrollTrigger to flatten mockup on scroll (overrides active animations gracefully if setup right, or we just keep the float subtle)
       gsap.to(mockupRef.current, {
         rotationX: 0,
         scale: 1.05,
@@ -133,52 +114,39 @@ export default function Hero() {
       onMouseMove={handleMouseMove}
       className="relative pt-40 pb-20 min-h-screen flex flex-col items-center justify-start perspective-[1200px] overflow-hidden"
     >
-      {/* Floating Epic Flag Background */}
-      <img 
-        src="/images/rd_flag_epic.png" 
-        alt="Dominican Flag Epic"
-        className="hero-floating absolute -top-20 -left-32 w-[600px] h-[600px] object-contain opacity-25 mix-blend-screen pointer-events-none z-0"
-        style={{ 
-          maskImage: 'radial-gradient(circle, black 30%, transparent 60%)', 
-          WebkitMaskImage: 'radial-gradient(circle, black 30%, transparent 60%)' 
-        }}
-      />
-      
-      {/* Floating Abstract Neon Background */}
-      <img 
-        src="/images/rd_abstract_neon.png" 
-        alt="Dominican Abstract Neon"
-        className="hero-floating-reverse absolute top-40 -right-40 w-[700px] h-[700px] object-contain opacity-30 mix-blend-screen pointer-events-none z-0 rotate-12"
-        style={{ 
-          maskImage: 'radial-gradient(circle, black 25%, transparent 65%)', 
-          WebkitMaskImage: 'radial-gradient(circle, black 25%, transparent 65%)' 
-        }}
-      />
 
       <div ref={textRef} className="max-w-5xl mx-auto px-6 text-center z-10 flex flex-col items-center">
-        <div className="hero-reveal inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
-          <span className="w-2 h-2 rounded-full bg-dominican-blue animate-pulse" />
-          <span className="text-xs font-mono text-white/70 uppercase tracking-widest">🇩🇴 KLK MI GENTE - CERO BULTO, ESTAMOS EN VIVO</span>
+        {/* Social Proof Badge */}
+        <div className="hero-reveal inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-dominican-blue/20 bg-dominican-blue/10 backdrop-blur-md">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-xs font-mono text-white/80 uppercase tracking-widest">🇩🇴 +2,500 familias dominicanas ya conectadas</span>
         </div>
 
         <h1 className="hero-reveal text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-tight mb-6 leading-tight text-balance">
-          El Sistema Que Está, <br />
-          <span className="text-gradient-dominican font-serif italic font-extrabold uppercase tracking-tighter">Rompiendo La Calle.</span>
+          Toda La TV Dominicana <br />
+          <span className="text-gradient-dominican font-serif italic font-extrabold">En Tu Casa. Desde $9.99/mes.</span>
         </h1>
 
-        <p className="hero-reveal text-lg md:text-xl text-white/50 max-w-2xl mb-10 font-sans leading-relaxed text-balance">
-          Televisión dominicana premium sin el mareo de los otros. Hecho pa' los tigres de la diáspora que exigen calidad, sin frizeo y a millón.
+        <p className="hero-reveal text-lg md:text-xl text-white/60 max-w-2xl mb-4 font-sans leading-relaxed text-balance">
+          Más de 100 canales RD en vivo, películas, series y Lidom. Sin contratos. Sin frizeo. Funciona en Smart TV, celular y laptop.
         </p>
 
-        <div className="hero-reveal flex flex-col sm:flex-row items-center gap-4 mt-10">
-          <button onClick={() => scrollTo('pricing')} className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-white text-obsidian rounded-2xl font-bold hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(255,255,255,0.15)] hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] relative overflow-hidden">
+        {/* Urgency line */}
+        <div className="hero-reveal flex items-center gap-2 mb-10">
+          <Zap size={16} className="text-champagne" />
+          <span className="text-sm text-champagne font-semibold">Prueba GRATIS 24 horas — Sin tarjeta de crédito</span>
+        </div>
+
+        <div className="hero-reveal flex flex-col sm:flex-row items-center gap-4">
+          <button onClick={openWhatsApp} className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-white text-obsidian rounded-2xl font-bold hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(255,255,255,0.15)] hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] relative overflow-hidden text-lg">
              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-black/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
-            <span className="relative z-10">¡Mete Mano Ya!</span>
+            <span className="relative z-10">Prueba Gratis 24h</span>
+            <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
           </button>
           
-          <button onClick={() => scrollTo('features')} className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-slate text-white border border-white/10 rounded-2xl font-semibold hover:bg-slate/80 hover:border-white/20 transition-all hover:scale-105 active:scale-95">
+          <button onClick={() => scrollTo('pricing')} className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-slate text-white border border-white/10 rounded-2xl font-semibold hover:bg-slate/80 hover:border-white/20 transition-all hover:scale-105 active:scale-95">
             <Play size={18} className="text-white/60 group-hover:text-white transition-colors" />
-            Ver el Mangueo 🇩🇴
+            Ver Planes y Precios
           </button>
         </div>
       </div>
@@ -190,7 +158,6 @@ export default function Hero() {
           className="relative w-full aspect-video rounded-2xl md:rounded-[2rem] border border-white/10 overflow-hidden shadow-[0_30px_100px_-15px_rgba(0,0,0,0.8)] bg-slate/50 backdrop-blur-xl transform-gpu ring-1 ring-white/5"
           style={{ transformStyle: 'preserve-3d' }}
         >
-          {/* Mockup UI Inner Structure */}
           <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
           
           {/* Header Mockup */}
@@ -200,17 +167,17 @@ export default function Hero() {
               <div className="w-3 h-3 rounded-full bg-champagne/30" />
               <div className="w-3 h-3 rounded-full bg-dominican-blue/30" />
             </div>
+            <div className="ml-4 text-xs font-mono text-white/30">raices.tv — Televisión Dominicana en Vivo</div>
           </div>
 
           {/* Video Player Skeleton layout */}
           <div className="p-6 flex gap-6 h-[calc(100%-3rem)]">
              {/* Main View Area */}
              <div className="flex-1 rounded-xl bg-gradient-to-br from-obsidian/80 to-black overflow-hidden relative border border-white/5">
-                {/* Simulated Content Loading Image */}
                 <div 
                   className="absolute inset-0 opacity-40 mix-blend-screen"
                   style={{
-                    backgroundImage: 'url("/images/rd_santo_domingo_neon.png")', // Epic Dominican AI Generatad Image
+                    backgroundImage: 'url("/images/rd_santo_domingo_neon.png")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}
@@ -223,34 +190,23 @@ export default function Hero() {
                    <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
                      <div className="w-1/3 h-full bg-dominican-red rounded-full shadow-[0_0_10px_rgba(225,29,72,0.8)]" />
                    </div>
-                   <span className="text-xs font-mono">EN VIVO</span>
+                   <span className="text-xs font-mono bg-dominican-red/80 px-2 py-0.5 rounded">EN VIVO</span>
                 </div>
              </div>
 
              {/* Sidebar Channels List */}
              <div className="w-64 hidden lg:flex flex-col gap-3">
-               <div className="h-16 rounded-xl bg-white/5 border border-white/5 flex items-center px-4 gap-4">
-                  <div className="w-10 h-10 rounded-md bg-white/10" />
-                  <div className="flex-1 space-y-2">
-                    <div className="h-2 bg-white/20 rounded-full w-3/4" />
-                    <div className="h-2 bg-white/10 rounded-full w-1/2" />
-                  </div>
-               </div>
-               <div className="h-16 rounded-xl bg-dominican-blue/10 border border-dominican-blue/20 flex items-center px-4 gap-4 relative overflow-hidden">
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-dominican-blue" />
-                  <div className="w-10 h-10 rounded-md bg-white/20 shadow-[0_0_15px_rgba(29,78,216,0.3)]" />
-                  <div className="flex-1 space-y-2">
-                    <div className="h-2 bg-white/40 rounded-full w-full" />
-                    <div className="h-2 bg-white/20 rounded-full w-2/3" />
-                  </div>
-               </div>
-               <div className="h-16 rounded-xl bg-white/5 border border-white/5 flex items-center px-4 gap-4 opacity-50">
-                  <div className="w-10 h-10 rounded-md bg-white/10" />
-                  <div className="flex-1 space-y-2">
-                    <div className="h-2 bg-white/20 rounded-full w-4/5" />
-                    <div className="h-2 bg-white/10 rounded-full w-1/3" />
-                  </div>
-               </div>
+               <div className="text-[10px] font-mono text-white/40 uppercase tracking-widest mb-1">Canales Populares</div>
+               {['Telemicro', 'Color Visión', 'CDN 37', 'Teleantillas'].map((ch, i) => (
+                 <div key={i} className={`h-14 rounded-xl ${i === 1 ? 'bg-dominican-blue/10 border-dominican-blue/20' : 'bg-white/5 border-white/5'} border flex items-center px-4 gap-3 relative overflow-hidden`}>
+                   {i === 1 && <div className="absolute left-0 top-0 bottom-0 w-1 bg-dominican-blue" />}
+                   <div className={`w-8 h-8 rounded-md ${i === 1 ? 'bg-white/20 shadow-[0_0_15px_rgba(29,78,216,0.3)]' : 'bg-white/10'}`} />
+                   <div className="flex-1">
+                     <div className={`text-sm font-medium ${i === 1 ? 'text-white' : 'text-white/60'}`}>{ch}</div>
+                     <div className="text-[10px] text-white/30 font-mono">EN VIVO</div>
+                   </div>
+                 </div>
+               ))}
              </div>
           </div>
         </div>

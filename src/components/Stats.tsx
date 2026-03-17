@@ -1,17 +1,17 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Shield, Wifi, Clock, Headphones, Download, Zap } from 'lucide-react';
+import { Shield, Wifi, Clock, Headphones, Tv, Users } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { icon: Shield, value: '99.8%', label: 'Uptime', color: 'text-dominican-blue', bg: 'bg-dominican-blue/15', border: 'border-dominican-blue/20' },
-  { icon: Wifi, value: '<50ms', label: 'Latencia', color: 'text-emerald-400', bg: 'bg-emerald-400/15', border: 'border-emerald-400/20' },
-  { icon: Clock, value: '24/7', label: 'Soporte', color: 'text-champagne', bg: 'bg-champagne/15', border: 'border-champagne/20' },
-  { icon: Headphones, value: '5min', label: 'Respuesta', color: 'text-dominican-red', bg: 'bg-dominican-red/15', border: 'border-dominican-red/20' },
-  { icon: Download, value: '0 Apps', label: 'Que Instalar', color: 'text-violet-400', bg: 'bg-violet-400/15', border: 'border-violet-400/20' },
-  { icon: Zap, value: '4K UHD', label: 'Resolución', color: 'text-amber-400', bg: 'bg-amber-400/15', border: 'border-amber-400/20' },
+  { icon: Tv, value: '100+', label: 'Canales RD', color: 'text-dominican-blue', bg: 'bg-dominican-blue/15', border: 'border-dominican-blue/20' },
+  { icon: Shield, value: '99.8%', label: 'Sin Cortes', color: 'text-emerald-400', bg: 'bg-emerald-400/15', border: 'border-emerald-400/20' },
+  { icon: Wifi, value: '4K UHD', label: 'Calidad', color: 'text-champagne', bg: 'bg-champagne/15', border: 'border-champagne/20' },
+  { icon: Clock, value: '24/7', label: 'Soporte', color: 'text-dominican-red', bg: 'bg-dominican-red/15', border: 'border-dominican-red/20' },
+  { icon: Headphones, value: '5 min', label: 'Activación', color: 'text-violet-400', bg: 'bg-violet-400/15', border: 'border-violet-400/20' },
+  { icon: Users, value: '2,500+', label: 'Familias', color: 'text-amber-400', bg: 'bg-amber-400/15', border: 'border-amber-400/20' },
 ];
 
 export default function Stats() {
