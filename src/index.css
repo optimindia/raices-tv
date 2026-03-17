@@ -23,12 +23,16 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-ivory via-ivory to-white/50;
   }
 
+  .text-gradient-dominican {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-dominican-blue via-white to-dominican-red;
+  }
+
   /* Dominican Glow Effects */
   .glow-blue {
     @apply relative;
   }
   .glow-blue::before {
-    @apply content-[''] absolute -inset-1 bg-dominican-blue/20 blur-xl z-0 pointer-events-none rounded-inherit mix-blend-screen;
+    @apply content-[''] absolute -inset-2 bg-dominican-blue/40 blur-2xl z-0 pointer-events-none rounded-inherit mix-blend-screen;
     border-radius: inherit;
   }
 
@@ -36,7 +40,7 @@
     @apply relative;
   }
   .glow-red::before {
-    @apply content-[''] absolute -inset-1 bg-dominican-red/20 blur-xl z-0 pointer-events-none rounded-inherit mix-blend-screen;
+    @apply content-[''] absolute -inset-2 bg-dominican-red/40 blur-2xl z-0 pointer-events-none rounded-inherit mix-blend-screen;
     border-radius: inherit;
   }
 }

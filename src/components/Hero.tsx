@@ -35,6 +35,23 @@ export default function Hero() {
       duration: 1.5,
       ease: 'power3.out'
     });
+
+    // Animate floating images
+    gsap.to('.hero-floating', {
+      x: xPos * 40,
+      y: yPos * 40,
+      rotation: xPos * 10,
+      duration: 2,
+      ease: 'power2.out'
+    });
+
+    gsap.to('.hero-floating-reverse', {
+      x: xPos * -60,
+      y: yPos * -60,
+      rotation: yPos * -15,
+      duration: 2.5,
+      ease: 'power2.out'
+    });
   };
 
   const scrollTo = (id: string) => {
@@ -114,22 +131,43 @@ export default function Hero() {
     <section 
       ref={containerRef} 
       onMouseMove={handleMouseMove}
-      className="relative pt-40 pb-20 min-h-screen flex flex-col items-center justify-start perspective-[1200px] overflow-visible"
+      className="relative pt-40 pb-20 min-h-screen flex flex-col items-center justify-start perspective-[1200px] overflow-hidden"
     >
+      {/* Floating Epic Flag Background */}
+      <img 
+        src="/images/rd_flag_epic.png" 
+        alt="Dominican Flag Epic"
+        className="hero-floating absolute -top-20 -left-32 w-[600px] h-[600px] object-contain opacity-25 mix-blend-screen pointer-events-none z-0"
+        style={{ 
+          maskImage: 'radial-gradient(circle, black 30%, transparent 60%)', 
+          WebkitMaskImage: 'radial-gradient(circle, black 30%, transparent 60%)' 
+        }}
+      />
+      
+      {/* Floating Abstract Neon Background */}
+      <img 
+        src="/images/rd_abstract_neon.png" 
+        alt="Dominican Abstract Neon"
+        className="hero-floating-reverse absolute top-40 -right-40 w-[700px] h-[700px] object-contain opacity-30 mix-blend-screen pointer-events-none z-0 rotate-12"
+        style={{ 
+          maskImage: 'radial-gradient(circle, black 25%, transparent 65%)', 
+          WebkitMaskImage: 'radial-gradient(circle, black 25%, transparent 65%)' 
+        }}
+      />
 
       <div ref={textRef} className="max-w-5xl mx-auto px-6 text-center z-10 flex flex-col items-center">
         <div className="hero-reveal inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
           <span className="w-2 h-2 rounded-full bg-dominican-blue animate-pulse" />
-          <span className="text-xs font-mono text-white/70 uppercase tracking-widest">Klk mi gente - Ya estamos en línea</span>
+          <span className="text-xs font-mono text-white/70 uppercase tracking-widest">🇩🇴 KLK MI GENTE - CERO BULTO, ESTAMOS EN VIVO</span>
         </div>
 
         <h1 className="hero-reveal text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-tight mb-6 leading-tight text-balance">
-          La mejor televisión, <br />
-          <span className="font-serif italic font-normal text-champagne">de lo mío.</span>
+          El Sistema Que Está, <br />
+          <span className="text-gradient-dominican font-serif italic font-extrabold uppercase tracking-tighter">Rompiendo La Calle.</span>
         </h1>
 
         <p className="hero-reveal text-lg md:text-xl text-white/50 max-w-2xl mb-10 font-sans leading-relaxed text-balance">
-          Vive la televisión dominicana con un flow cinematográfico. Creada pa' la diáspora que exige excelencia, velocidad y cero tapones en la red.
+          Televisión dominicana premium sin el mareo de los otros. Hecho pa' los tigres de la diáspora que exigen calidad, sin frizeo y a millón.
         </p>
 
         <div className="hero-reveal flex flex-col sm:flex-row items-center gap-4 mt-10">
@@ -140,7 +178,7 @@ export default function Hero() {
           
           <button onClick={() => scrollTo('features')} className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-slate text-white border border-white/10 rounded-2xl font-semibold hover:bg-slate/80 hover:border-white/20 transition-all hover:scale-105 active:scale-95">
             <Play size={18} className="text-white/60 group-hover:text-white transition-colors" />
-            Ver el Mangueo
+            Ver el Mangueo 🇩🇴
           </button>
         </div>
       </div>
@@ -172,7 +210,7 @@ export default function Hero() {
                 <div 
                   className="absolute inset-0 opacity-40 mix-blend-screen"
                   style={{
-                    backgroundImage: 'url("https://images.unsplash.com/photo-1542204165-65bf26472b9b?auto=format&fit=crop&q=80")', // Santo domingo or abstract
+                    backgroundImage: 'url("/images/rd_santo_domingo_neon.png")', // Epic Dominican AI Generatad Image
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}

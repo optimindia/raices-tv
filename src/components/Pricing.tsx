@@ -7,47 +7,47 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PLANS = [
   {
-    name: 'El Básico',
+    name: 'El Menor',
     price: '$9.99',
     period: '/mes',
-    description: "Pa' resolver y no perderte las noticias de la isla.",
+    description: "Pa' resolver al paso, sin volverte loco y ver lo tuyo.",
     features: [
       '1 Pantalla en HD',
-      'Canales Nacionales (Color Visión, Telemicro)',
+      'Canales Nacionales Dominicanos',
       'Soporte estándar WhatsApp'
     ],
     popular: false,
-    cta: 'Empezar Ahora',
+    cta: 'Meter Mano',
   },
   {
     name: 'El Tíguere',
     price: '$14.99',
     period: '/mes',
-    description: "El plan inteligente pa' los que quieren de todo un chin.",
+    description: "El verdadero flow pa' los que saben coronar con la mejor TV.",
     features: [
       '3 Pantallas simultáneas (HD+)',
-      'Todos los canales Dominicanos Premium',
-      'Películas y Series Latinas',
+      'Cines, Series y VIP Dominicano',
+      'Películas y Flow Picante',
       'Cero frizeo garantizado',
-      'Soporte Prioritario VIP'
+      'Soporte Prioritario de una vez'
     ],
     popular: true,
-    cta: '¡Dale que es tuyo!',
+    cta: 'Comprar y Coronar',
   },
   {
-    name: 'El Jefe',
+    name: 'El Patrón',
     price: '$24.99',
     period: '/mes',
-    description: "Pa' que goces al máximo sin restricciones, nítido 4K.",
+    description: "Pa' ti que exiges respeto y lo quieres to' nítido 4K.",
     features: [
       '4 Pantallas en 4K Ultra HD',
-      'Catálogo completo sin cortes',
-      'PPV y Deportes en Vivo (Lidom Premium)',
-      'Conexión "Hyper-Fast" sin delay',
-      'Soporte 24/7 instantáneo'
+      'Taquilla completa sin muela',
+      'Pelota Invernal y PPV Premium',
+      'Conexión al palo sin delay',
+      'Soporte 24/7 sin coger lucha'
     ],
     popular: false,
-    cta: 'Ser El Jefe',
+    cta: 'Ser El Patrón',
   }
 ];
 
@@ -90,10 +90,10 @@ export default function Pricing() {
         
         <div className="text-center mb-16 relative z-10">
           <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4 text-balance">
-            Elige tu plan, <span className="text-dominican-blue font-serif italic text-4xl">de lo mío.</span>
+            Compra y Vende Hoy, <span className="text-gradient-dominican font-serif italic text-4xl">De Lo Mío.</span>
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto">
-            Sin contratos raros. Cancela cuando quieras. Disfruta tu contenido sin complicaciones, como debe ser.
+            Arma tu coro sin pagar de más. Cero contratos ocultos, cero muela. Tú decides la grasa que te metes al bolsillo.
           </p>
         </div>
 

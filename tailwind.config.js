@@ -12,8 +12,8 @@ export default {
         ivory: '#F9F9F9',
         champagne: '#D4AF37', // True gold
         dominican: {
-          blue: '#002D62', // Essential Dominican Flag Blue
-          red: '#CE1126',  // Essential Dominican Flag Red
+          blue: '#0047FF', // Aggressive bright neon blue
+          red: '#FF1E1E',  // Aggressive bright neon red
         }
       },
       fontFamily: {

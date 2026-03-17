@@ -62,7 +62,7 @@ export default function Navbar() {
             <div className="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-dominican-blue to-dominican-red shadow-[0_0_15px_rgba(0,45,98,0.3)] group-hover/logo:scale-110 group-hover/logo:shadow-[0_0_25px_rgba(206,17,38,0.5)] transition-all duration-300">
               <Tv size={16} className="text-white" />
             </div>
-            <span className="tracking-tight">Raíces<span className="text-champagne">TV</span></span>
+            <span className="tracking-tight">Raíces<span className="text-champagne">TV 🇩🇴</span></span>
           </button>
 
           <div className="hidden md:flex items-center gap-7 text-sm font-medium text-white/60">
@@ -77,7 +77,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <button onClick={() => scrollTo('pricing')} className="px-6 py-2.5 rounded-full bg-gradient-to-r from-dominican-blue to-dominican-red font-semibold text-sm hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(206,17,38,0.2)] hover:shadow-[0_0_30px_rgba(206,17,38,0.4)] relative overflow-hidden group/btn text-white">
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-out" />
-              <span className="relative z-10">Comprar Acceso</span>
+              <span className="relative z-10">¡Entrar Ahora!</span>
             </button>
           </div>
 
@@ -102,7 +102,7 @@ export default function Navbar() {
             ))}
             <div className="mt-3">
               <button onClick={() => scrollTo('pricing')} className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-dominican-blue to-dominican-red text-white font-bold transition-all text-sm">
-                Comprar Acceso
+                ¡Entrar Ahora!
               </button>
             </div>
           </div>

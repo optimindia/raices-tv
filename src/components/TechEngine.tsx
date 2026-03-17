@@ -67,13 +67,26 @@ export default function TechEngine() {
   }, []);
 
   return (
-    <section id="stability" ref={containerRef} className="py-24 relative overflow-hidden">
+    <section id="stability" ref={containerRef} className="py-24 relative overflow-hidden bg-obsidian">
+      {/* Epic Neon Palms Background */}
+      <div 
+        className="absolute inset-0 opacity-20 pointer-events-none mix-blend-screen z-0"
+        style={{
+          backgroundImage: 'url("/images/rd_palms_neon.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center bottom',
+          maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)'
+        }}
+      />
+      
+      <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian z-0" />
+
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center relative z-10">
         <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4">
-          Infraestructura <span className="text-dominican-blue font-serif italic text-4xl">Dedicada.</span>
+          Nuestra Grasa <span className="text-gradient-dominican font-serif italic text-4xl">Tecnológica.</span>
         </h2>
-        <p className="text-white/70 max-w-2xl mx-auto">
-          No somos revendedores. Usamos servidores optimizados y túneles paralelos exclusivos para conectar la costa este de EE.UU. directamente con los nodos caribeños.
+        <p className="text-white/70 max-w-2xl mx-auto text-lg">
+          Cero mareo. Tenemos túneles directos desde Norteamérica hasta RD pa' que la señal te llegue nítida, sin intermediarios ni macos.
         </p>
       </div>
 
@@ -102,8 +115,8 @@ export default function TechEngine() {
               <Zap size={26} className="text-white" />
             </div>
             <div className="relative z-10">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-champagne">PROCESAMIENTO</span>
-              <div className="font-semibold text-white text-lg">Raíces Core</div>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-champagne">LA MAQUINA</span>
+              <div className="font-semibold text-white text-lg">El Patrón Core</div>
             </div>
           </div>
 
@@ -178,7 +191,7 @@ export default function TechEngine() {
               <div className="absolute inset-0 rounded-full border border-white/10 animate-[ping_3s_ease-out_infinite]" />
               <Zap size={40} className="text-white" />
             </div>
-            <span className="font-mono text-xs uppercase tracking-widest text-champagne">Raíces Core</span>
+            <span className="font-mono text-xs uppercase tracking-widest text-champagne">El Patrón Core</span>
           </div>
 
           <div className="tech-node-desktop flex flex-col items-center">

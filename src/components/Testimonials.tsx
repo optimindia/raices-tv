@@ -83,20 +83,33 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" ref={containerRef} className="py-28 relative overflow-hidden">
-      <div className="absolute top-0 left-1/4 w-[50vw] h-[30vh] bg-champagne/5 blur-[200px] rounded-full pointer-events-none" />
+    <section id="testimonials" ref={containerRef} className="py-28 relative overflow-hidden bg-obsidian">
+      {/* Dominican Family watching TV Background */}
+      <div 
+        className="absolute inset-0 opacity-20 pointer-events-none mix-blend-screen z-0"
+        style={{
+          backgroundImage: 'url("/images/rd_family_tv.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
+          maskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)'
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent z-0" />
+
+      <div className="absolute top-0 left-1/4 w-[50vw] h-[30vh] bg-champagne/5 blur-[200px] rounded-full pointer-events-none z-0" />
       
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-champagne/20 bg-champagne/5">
             <Quote size={14} className="text-champagne" />
-            <span className="text-xs font-mono text-champagne uppercase tracking-widest">Lo que dice la gente</span>
+            <span className="text-xs font-mono text-champagne uppercase tracking-widest">Lo que dice el corillo</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4 text-balance">
-            Miles de familias ya <span className="font-serif italic text-champagne">gozan con Raíces.</span>
+            El pueblo entero ya, <span className="font-serif italic text-champagne">goza con Raíces.</span>
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto">
-            Dominicanos reales en Estados Unidos compartiendo su experiencia. Sin filtros, sin libreto.
+            Dominicanos reales de la diáspora que ya no cogen lucha. Sin filtros, cero muela.
           </p>
         </div>
 

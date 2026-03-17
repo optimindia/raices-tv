@@ -36,10 +36,10 @@ export default function BentoGrid() {
       
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-sans font-bold tracking-tight mb-4">
-          Diseñado <span className="text-champagne font-serif italic font-normal">Pa' Que No Falle.</span>
+          Diseñado Pa' Que <span className="text-gradient-dominican font-serif italic font-bold">No Te Dé Pique.</span>
         </h2>
         <p className="text-lg text-white/70 leading-relaxed font-sans max-w-xl mx-auto">
-          Un sistema nítido que garantiza tu conexión con la República Dominicana con la mayor estabilidad del mercado, cero mortificaciones.
+          Un sistema nítido, sin cotorra. Conéctate a RD con la grasa tecnológica que te asegura cero mortificaciones en tu pantalla.
         </p>
       </div>
 
@@ -53,9 +53,9 @@ export default function BentoGrid() {
             <div className="w-12 h-12 rounded-xl bg-dominican-blue/20 text-dominican-blue flex items-center justify-center mb-8 border border-dominican-blue/10">
               <Heart size={24} className="fill-dominican-blue/30" />
             </div>
-            <h3 className="text-2xl font-bold mb-3 text-white">Volver a sentirte en tu tierra</h3>
+            <h3 className="text-2xl font-bold mb-3 text-white">Volver al barrio en 4K</h3>
             <p className="text-white/70 mb-10 max-w-sm leading-relaxed">
-              La nostalgia se combate con imágenes claras. Disfruta de todos los programas dominicanos en calidad 4K/FHD sin cortes.
+              Toda tu programación, sin bulto. Los canales dominicanos en calidad 4K/FHD sin que se corte nunca en el mejor momento.
             </p>
 
             <div className="mt-auto flex items-center justify-between border-t border-white/10 pt-6">
@@ -87,9 +87,9 @@ export default function BentoGrid() {
             <div className="w-12 h-12 rounded-xl bg-dominican-red/20 text-dominican-red flex items-center justify-center mb-6 border border-dominican-red/10">
               <Activity size={24} />
             </div>
-            <h3 className="text-2xl font-bold mb-3 text-white">Cero frizeo garantizado</h3>
+            <h3 className="text-2xl font-bold mb-3 text-white">Cero maco con la señal</h3>
             <p className="text-white/70 mb-8 text-sm leading-relaxed">
-              Infraestructura anti-buffer con servidores dedicados para el tráfico Norteamérica-Caribe. Nítido siempre.
+              Nuestros servidores están seteados al palo. Dale banda al buffer, aquí la vaina es veloz para Norteamérica y el Caribe.
             </p>
 
             <div className="mt-auto h-32 flex items-end gap-1.5">
@@ -104,11 +104,34 @@ export default function BentoGrid() {
                 />
               ))}
             </div>
+
+            {/* Floating Baseball Image inside the card */}
+            <img 
+              src="/images/rd_baseball_epic.png" 
+              alt="Epic Baseball Lidom"
+              className="absolute -bottom-10 -right-10 w-64 h-64 object-contain opacity-70 mix-blend-screen pointer-events-none animate-[pulse_4s_ease-in-out_infinite]"
+              style={{ 
+                transform: 'rotate(-15deg)',
+                maskImage: 'radial-gradient(circle, black 40%, transparent 70%)',
+                WebkitMaskImage: 'radial-gradient(circle, black 40%, transparent 70%)'
+              }}
+            />
           </div>
         </div>
 
         {/* Bento Card 3: Screens */}
         <div className="bento-item md:col-span-3 glass-card p-8 sm:p-12 relative overflow-hidden group border-white/10 hover:border-champagne/30 transition-all duration-500 hover:-translate-y-1">
+          {/* Tígueres watching TV Background */}
+          <div 
+            className="absolute inset-0 opacity-20 pointer-events-none mix-blend-screen z-0 group-hover:opacity-30 transition-opacity duration-700"
+            style={{
+              backgroundImage: 'url("/images/rd_friends_tv_sports.png")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center 30%',
+              maskImage: 'linear-gradient(to right, black 20%, transparent 80%)',
+              WebkitMaskImage: 'linear-gradient(to right, black 20%, transparent 80%)'
+            }}
+          />
           <div className="absolute inset-0 bg-gradient-to-br from-champagne/5 to-transparent z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           
           <div className="relative z-10 flex flex-col md:flex-row items-center gap-12">
@@ -116,12 +139,12 @@ export default function BentoGrid() {
               <div className="w-12 h-12 rounded-xl bg-champagne/20 text-champagne flex items-center justify-center mb-6 border border-champagne/10">
                 <Monitor size={24} />
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">4 Pantallas Simultáneas</h3>
+              <h3 className="text-2xl font-bold mb-3 text-white">Pa' Toda La Familia</h3>
               <p className="text-white/70 mb-6 leading-relaxed">
-                En el plan máximo, comparte con tu familia. Funciona en Smart TV, móviles, laptops y tablets al mismo tiempo.
+                Comparte con los tuyos sin pagar de más. Smart TV, celulares, laptops... to' el mundo de alta con una sola cuenta.
               </p>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-champagne/10 text-champagne font-mono text-sm border border-champagne/10">
-                <span>PLAN EL JEFE</span>
+                <span>PLAN PATRÓN</span>
               </div>
             </div>
 

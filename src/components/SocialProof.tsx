@@ -14,8 +14,8 @@ export default function SocialProof() {
   return (
     <section className="py-12 border-y border-white/5 bg-black/20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-6 text-center">
-        <p className="text-sm text-white/40 font-mono tracking-widest uppercase">
-          Confianza de los dominicanos en EE.UU.
+        <p className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-dominican-blue to-dominican-red font-mono tracking-widest uppercase">
+          EL CORILLO QUE YA ESTÁ CORONANDO CON NOSOTROS 🇩🇴
         </p>
       </div>
 

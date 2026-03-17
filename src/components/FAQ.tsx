@@ -67,13 +67,13 @@ export default function FAQ() {
         <div className="text-center mb-16 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-dominican-blue/20 bg-dominican-blue/5">
             <HelpCircle size={14} className="text-dominican-blue" />
-            <span className="text-xs font-mono text-white/60 uppercase tracking-widest">Preguntas Frecuentes</span>
+            <span className="text-xs font-mono text-white/60 uppercase tracking-widest">¿Qué Lo Qué Con Raíces?</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4 text-balance">
-            Todo lo que necesitas <span className="font-serif italic text-dominican-blue">saber.</span>
+            Cero mareo. Todo al claro, <span className="font-serif italic text-dominican-blue">como debe ser.</span>
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto">
-            Las dudas más comunes resueltas al instante. Si no encuentras tu respuesta, escríbenos por WhatsApp.
+            Las dudas más comunes resueltas al instante. Si sigues embotellado, tíranos por WhatsApp que te resolvemos de una.
           </p>
         </div>
 

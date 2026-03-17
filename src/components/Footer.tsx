@@ -23,10 +23,10 @@ export default function Footer() {
 
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-sans font-bold tracking-tight mb-6 text-white text-balance">
-              Dímelo, ¿listo pa' sentirte <br className="hidden md:block"/> en <span className="font-serif italic text-dominican-blue">tu tierra?</span>
+              ¡Dímelo!, ¿listo pa' meterte <br className="hidden md:block"/> en <span className="font-serif italic text-dominican-blue">el bolsillo la mejor TV?</span>
             </h2>
             <p className="text-lg text-white/60 mb-10 max-w-2xl mx-auto text-balance">
-              Rompe el hielo y únete a las miles de familias en EE.UU. que ya están gozando la televisión dominicana nítida y sin cortes.
+              Déjate de adivinar. Únete al corillo que ya está gozando su televisión RD VIP sin coger pique.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button 
@@ -34,14 +34,14 @@ export default function Footer() {
                 className="group/btn relative overflow-hidden w-full sm:w-auto px-8 py-4 bg-white text-obsidian rounded-2xl font-bold hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-[0_0_50px_rgba(255,255,255,0.25)] flex items-center justify-center gap-2"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-black/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-out" />
-                <span className="relative z-10 text-lg">Elegir Plan</span>
+                <span className="relative z-10 text-lg">Coronar Un Plan 🇩🇴</span>
                 <ArrowRight size={20} className="relative z-10 group-hover/btn:translate-x-1 transition-transform" />
               </button>
               <button 
                 onClick={() => scrollTo('features')} 
                 className="group/btn2 w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white hover:bg-white/5 transition-all text-lg rounded-2xl flex items-center justify-center font-medium hover:scale-105 active:scale-95"
               >
-                Ver Características
+                Saber Más
               </button>
             </div>
           </div>
@@ -101,8 +101,8 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between text-white/30 text-xs relative z-10">
         <span>© 2026 Raíces TV. Todos los derechos reservados.</span>
-        <span className="mt-2 md:mt-0 flex items-center gap-1">
-          Diseñado con precisión <CheckCircle2 size={12} className="text-dominican-blue ml-1"/>
+        <span className="mt-2 md:mt-0 flex items-center gap-1 text-white/50">
+          Hecho con orgullo desde el patio 🇩🇴 <CheckCircle2 size={12} className="text-dominican-blue ml-1"/>
         </span>
       </div>
     </footer>
