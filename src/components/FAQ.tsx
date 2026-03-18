@@ -67,12 +67,12 @@ export default function FAQ() {
         <div className="text-center mb-16 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-dominican-blue/20 bg-dominican-blue/5">
             <HelpCircle size={14} className="text-dominican-blue" />
-            <span className="text-xs font-mono text-white/60 uppercase tracking-widest">Preguntas Frecuentes</span>
+            <span className="text-xs font-mono text-white/80 uppercase tracking-widest">Preguntas Frecuentes</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4 text-balance">
             Todo Claro Antes De <span className="font-serif italic text-dominican-blue">Decidirte.</span>
           </h2>
-          <p className="text-lg text-white/70 max-w-xl mx-auto">
+          <p className="text-lg text-white/80 max-w-xl mx-auto">
             Las dudas más comunes resueltas al instante. ¿Algo más? Escríbenos por WhatsApp.
           </p>
         </div>

@@ -104,7 +104,7 @@ export default function Devices() {
           <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4">
             Disponible en <span className="text-gradient-dominican font-serif italic">Todos Tus Dispositivos.</span>
           </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Android TV, Roku, TV Box, Google TV, celulares y tablets. Instalación rápida por Downloader o link directo.
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function Devices() {
             </div>
             <div>
               <h4 className="text-white font-bold mb-1">Para Smart TVs</h4>
-              <p className="text-white/60 text-sm">Instala vía la app <span className="text-dominican-blue font-semibold">Downloader</span> en tu Android TV, TV Box o Google TV.</p>
+              <p className="text-white/80 text-sm">Instala vía la app <span className="text-dominican-blue font-semibold">Downloader</span> en tu Android TV, TV Box o Google TV.</p>
             </div>
           </div>
           <div className="glass-card p-6 flex items-center gap-4 flex-1 max-w-sm">
@@ -126,7 +126,7 @@ export default function Devices() {
             </div>
             <div>
               <h4 className="text-white font-bold mb-1">Para Celulares & Tablets</h4>
-              <p className="text-white/60 text-sm">Te enviamos un <span className="text-champagne font-semibold">link directo</span> por WhatsApp. Un toque y listo.</p>
+              <p className="text-white/80 text-sm">Te enviamos un <span className="text-champagne font-semibold">link directo</span> por WhatsApp. Un toque y listo.</p>
             </div>
           </div>
         </div>

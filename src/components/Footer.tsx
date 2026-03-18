@@ -25,7 +25,7 @@ export default function Footer() {
             <h2 className="text-4xl md:text-5xl font-sans font-bold tracking-tight mb-6 text-white text-balance">
               ¿Todavía sin tu <br className="hidden md:block"/> <span className="font-serif italic text-dominican-blue">TV dominicana?</span>
             </h2>
-            <p className="text-lg text-white/60 mb-10 max-w-2xl mx-auto text-balance">
+            <p className="text-lg text-white/70 mb-10 max-w-2xl mx-auto text-balance">
               Pruébala GRATIS 24 horas. Sin tarjeta de crédito. Sin compromiso. Si no te encanta, no pagas nada.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

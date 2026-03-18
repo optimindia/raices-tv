@@ -127,7 +127,7 @@ export default function Hero() {
           <span className="text-gradient-dominican font-serif italic font-extrabold">En Tu Casa. Desde $9.99/mes.</span>
         </h1>
 
-        <p className="hero-reveal text-lg md:text-xl text-white/60 max-w-2xl mb-4 font-sans leading-relaxed text-balance">
+        <p className="hero-reveal text-lg md:text-xl text-white/70 max-w-2xl mb-4 font-sans leading-relaxed text-balance">
           +4,000 canales en vivo, +40,000 películas y +5,000 series. Para Android TV, Roku, celulares, tablets y más. Sin contratos, sin frizeo.
         </p>
 

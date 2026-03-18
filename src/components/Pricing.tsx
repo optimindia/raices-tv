@@ -98,7 +98,7 @@ export default function Pricing() {
           <h2 className="text-3xl md:text-5xl font-sans font-bold tracking-tight mb-4 text-balance">
             Elige Tu Plan. <span className="text-gradient-dominican font-serif italic text-4xl">Sin Contratos. Cancela Cuando Quieras.</span>
           </h2>
-          <p className="text-lg text-white/70 max-w-xl mx-auto">
+          <p className="text-lg text-white/80 max-w-xl mx-auto">
             Planes simples y claros. Paga mensual con tarjeta o Zelle. Sin costos ocultos ni letras chiquitas.
           </p>
         </div>
@@ -119,10 +119,10 @@ export default function Pricing() {
 
               <div className="mb-8 relative z-10">
                 <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
-                <p className="text-white/60 text-sm mb-6 h-10 line-clamp-2">{plan.description}</p>
+                <p className="text-white/80 text-sm mb-6 h-10 line-clamp-2">{plan.description}</p>
                 <div className="flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-white/60 font-medium">{plan.period}</span>
+                  <span className="text-white/80 font-medium">{plan.period}</span>
                 </div>
               </div>
 

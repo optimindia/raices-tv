@@ -54,15 +54,15 @@ export default function BentoGrid() {
               <Tv size={24} />
             </div>
             <h3 className="text-2xl font-bold mb-3 text-white">+4,000 Canales en Vivo</h3>
-            <p className="text-white/70 mb-6 max-w-sm leading-relaxed">
+            <p className="text-white/80 mb-6 max-w-sm leading-relaxed">
               Telemicro, Color Visión, CDN 37, Teleantillas, Antena 7, ESPN, Fox Sports, HBO y miles más. Canales dominicanos, internacionales, deportes y entretenimiento 24/7.
             </p>
 
             {/* Channel Grid */}
             <div className="mt-auto grid grid-cols-4 gap-2">
               {['Telemicro', 'Color Visión', 'CDN 37', 'Teleantillas', 'Antena 7', 'RNN', 'Coral 39', 'Telesistema'].map((ch, i) => (
-                <div key={i} className="p-2.5 rounded-lg bg-white/5 border border-white/5 text-center group-hover:bg-white/10 transition-colors">
-                  <span className="text-[10px] font-mono text-white/70 block">{ch}</span>
+                <div key={i} className="p-2.5 rounded-lg bg-white/10 border border-white/10 text-center group-hover:bg-white/15 transition-colors">
+                  <span className="text-[10px] font-mono text-white/90 block font-medium">{ch}</span>
                 </div>
               ))}
             </div>
@@ -78,7 +78,7 @@ export default function BentoGrid() {
               <Signal size={24} />
             </div>
             <h3 className="text-2xl font-bold mb-3 text-white">Cero Cortes. Cero Frizeo.</h3>
-            <p className="text-white/70 mb-8 text-sm leading-relaxed">
+            <p className="text-white/80 mb-8 text-sm leading-relaxed">
               Señal estable las 24 horas. Servidores optimizados para Estados Unidos con 99.8% de disponibilidad. Ni en Super Bowl se te cae.
             </p>
 
@@ -111,9 +111,9 @@ export default function BentoGrid() {
               <div className="w-12 h-12 rounded-xl bg-champagne/20 text-champagne flex items-center justify-center mb-6 border border-champagne/10">
                 <Monitor size={24} />
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">Toda La Familia Conectada</h3>
-              <p className="text-white/70 mb-6 leading-relaxed">
-                Hasta 4 pantallas al mismo tiempo. Mamá ve novelas, papá ve noticias, los muchachos ven lo suyo. Una sola cuenta, cero conflictos.
+              <h3 className="text-2xl font-bold mb-3 text-white">Todas Tus Pantallas Cubiertas</h3>
+              <p className="text-white/80 mb-6 leading-relaxed">
+                Hasta 4 pantallas al mismo tiempo. Mamá ve novelas, papá ve noticias, los muchachos ven lo suyo. Android TV, Roku, celulares, tablets, TV Box y Google TV.
               </p>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-champagne/10 text-champagne font-mono text-sm border border-champagne/10">
                 <span>Hasta 4 pantallas simultáneas</span>
@@ -126,7 +126,7 @@ export default function BentoGrid() {
                   <div className="absolute inset-0 bg-gradient-to-br from-champagne/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                   <Smartphone size={28} className="text-white/80" />
                 </div>
-                <span className="text-xs text-white/60 font-mono">Celular</span>
+                <span className="text-xs text-white/80 font-mono">Celular</span>
               </div>
 
               <div className="flex flex-col items-center gap-3 z-10 transform transition-transform group-hover:-translate-y-4 duration-500">
@@ -142,7 +142,7 @@ export default function BentoGrid() {
                   <div className="absolute inset-0 bg-gradient-to-br from-champagne/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                   <Laptop size={28} className="text-white/80" />
                 </div>
-                <span className="text-xs text-white/60 font-mono">Laptop</span>
+                <span className="text-xs text-white/80 font-mono">Laptop</span>
               </div>
             </div>
           </div>
