@@ -128,7 +128,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-reveal text-lg md:text-xl text-white/60 max-w-2xl mb-4 font-sans leading-relaxed text-balance">
-          Más de 100 canales RD en vivo, películas, series y Lidom. Sin contratos. Sin frizeo. Funciona en Smart TV, celular y laptop.
+          +4,000 canales en vivo, +40,000 películas y +5,000 series. Para Android TV, Roku, celulares, tablets y más. Sin contratos, sin frizeo.
         </p>
 
         {/* Urgency line */}
@@ -167,20 +167,17 @@ export default function Hero() {
               <div className="w-3 h-3 rounded-full bg-champagne/30" />
               <div className="w-3 h-3 rounded-full bg-dominican-blue/30" />
             </div>
-            <div className="ml-4 text-xs font-mono text-white/30">raices.tv — Televisión Dominicana en Vivo</div>
+            <div className="ml-4 text-xs font-mono text-white/30">Raíces TV — Tu TV Dominicana en Vivo</div>
           </div>
 
           {/* Video Player Skeleton layout */}
           <div className="p-6 flex gap-6 h-[calc(100%-3rem)]">
-             {/* Main View Area */}
+             {/* Main View Area with real image */}
              <div className="flex-1 rounded-xl bg-gradient-to-br from-obsidian/80 to-black overflow-hidden relative border border-white/5">
-                <div 
-                  className="absolute inset-0 opacity-40 mix-blend-screen"
-                  style={{
-                    backgroundImage: 'url("/images/rd_santo_domingo_neon.png")',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
+                <img 
+                  src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=1200&q=80" 
+                  alt="Family watching TV"
+                  className="absolute inset-0 w-full h-full object-cover opacity-50"
                 />
                 {/* UI Overlay on player */}
                 <div className="absolute bottom-6 left-6 right-6 flex items-center gap-4 text-white/80">

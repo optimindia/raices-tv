@@ -70,7 +70,7 @@ export default function TechEngine() {
   };
 
   return (
-    <section id="stability" ref={containerRef} className="py-24 relative overflow-hidden bg-obsidian">
+    <section id="como-funciona" ref={containerRef} className="py-24 relative overflow-hidden bg-obsidian">
       {/* Subtle Neon Palms Background */}
       <div 
         className="absolute inset-0 opacity-10 pointer-events-none mix-blend-screen z-0"

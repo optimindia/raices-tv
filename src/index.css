@@ -5,8 +5,14 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-obsidian text-ivory font-sans antialiased selection:bg-dominican-blue/30 selection:text-white overflow-x-hidden;
+  }
+  section[id] {
+    scroll-margin-top: 6rem;
   }
 }
 

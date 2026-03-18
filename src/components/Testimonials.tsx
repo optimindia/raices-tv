@@ -88,7 +88,7 @@ export default function Testimonials() {
       <div 
         className="absolute inset-0 opacity-20 pointer-events-none mix-blend-screen z-0"
         style={{
-          backgroundImage: 'url("/images/rd_family_tv.png")',
+          backgroundImage: 'url("/images/hero_dominican_tv.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center top',
           maskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)',

@@ -1,16 +1,16 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Shield, Wifi, Clock, Headphones, Tv, Users } from 'lucide-react';
+import { Tv, Film, Clapperboard, Users, Shield, Zap } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { icon: Tv, value: '100+', label: 'Canales RD', color: 'text-dominican-blue', bg: 'bg-dominican-blue/15', border: 'border-dominican-blue/20' },
+  { icon: Tv, value: '4,000+', label: 'Canales en Vivo', color: 'text-dominican-blue', bg: 'bg-dominican-blue/15', border: 'border-dominican-blue/20' },
+  { icon: Film, value: '40,000+', label: 'Películas', color: 'text-champagne', bg: 'bg-champagne/15', border: 'border-champagne/20' },
+  { icon: Clapperboard, value: '5,000+', label: 'Series', color: 'text-dominican-red', bg: 'bg-dominican-red/15', border: 'border-dominican-red/20' },
   { icon: Shield, value: '99.8%', label: 'Sin Cortes', color: 'text-emerald-400', bg: 'bg-emerald-400/15', border: 'border-emerald-400/20' },
-  { icon: Wifi, value: '4K UHD', label: 'Calidad', color: 'text-champagne', bg: 'bg-champagne/15', border: 'border-champagne/20' },
-  { icon: Clock, value: '24/7', label: 'Soporte', color: 'text-dominican-red', bg: 'bg-dominican-red/15', border: 'border-dominican-red/20' },
-  { icon: Headphones, value: '5 min', label: 'Activación', color: 'text-violet-400', bg: 'bg-violet-400/15', border: 'border-violet-400/20' },
+  { icon: Zap, value: '4K UHD', label: 'Calidad', color: 'text-violet-400', bg: 'bg-violet-400/15', border: 'border-violet-400/20' },
   { icon: Users, value: '2,500+', label: 'Familias', color: 'text-amber-400', bg: 'bg-amber-400/15', border: 'border-amber-400/20' },
 ];
 

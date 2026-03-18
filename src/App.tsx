@@ -8,6 +8,7 @@ import SocialProof from './components/SocialProof';
 import Stats from './components/Stats';
 import BentoGrid from './components/BentoGrid';
 import TechEngine from './components/TechEngine';
+import Devices from './components/Devices';
 import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -48,6 +49,7 @@ function App() {
         <Stats />
         <BentoGrid />
         <TechEngine />
+        <Devices />
         <Testimonials />
         <Pricing />
         <FAQ />

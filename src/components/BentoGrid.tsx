@@ -39,7 +39,7 @@ export default function BentoGrid() {
           ¿Por Qué Elegir <span className="text-gradient-dominican font-serif italic font-bold">Raíces TV?</span>
         </h2>
         <p className="text-lg text-white/70 leading-relaxed font-sans max-w-xl mx-auto">
-          Todo lo que necesitas para disfrutar la televisión dominicana como si estuvieras allá. Sin complicaciones.
+          +4,000 canales, +40,000 películas y +5,000 series. Todo desde una sola app, sin complicaciones.
         </p>
       </div>
 
@@ -53,9 +53,9 @@ export default function BentoGrid() {
             <div className="w-12 h-12 rounded-xl bg-dominican-blue/20 text-dominican-blue flex items-center justify-center mb-8 border border-dominican-blue/10">
               <Tv size={24} />
             </div>
-            <h3 className="text-2xl font-bold mb-3 text-white">Tus Canales Favoritos en Vivo</h3>
+            <h3 className="text-2xl font-bold mb-3 text-white">+4,000 Canales en Vivo</h3>
             <p className="text-white/70 mb-6 max-w-sm leading-relaxed">
-              Telemicro, Color Visión, CDN 37, Teleantillas, Antena 7, Coral 39, RNN y más de 100 canales dominicanos. Noticias, novelas, deportes y entretenimiento 24/7.
+              Telemicro, Color Visión, CDN 37, Teleantillas, Antena 7, ESPN, Fox Sports, HBO y miles más. Canales dominicanos, internacionales, deportes y entretenimiento 24/7.
             </p>
 
             {/* Channel Grid */}

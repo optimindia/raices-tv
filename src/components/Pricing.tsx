@@ -13,7 +13,8 @@ const PLANS = [
     description: 'Para empezar a disfrutar tus canales favoritos sin complicaciones.',
     features: [
       '1 Pantalla en HD',
-      '80+ Canales Dominicanos',
+      '4,000+ Canales en Vivo',
+      '40,000+ Películas',
       'Soporte por WhatsApp'
     ],
     popular: false,
@@ -26,8 +27,8 @@ const PLANS = [
     description: 'El más popular. Ideal para familias que quieren verlo todo.',
     features: [
       '3 Pantallas simultáneas HD+',
-      '100+ Canales + Películas',
-      'Lidom y Deportes en Vivo',
+      '4,000+ Canales + 40,000+ Películas',
+      '5,000+ Series y Deportes en Vivo',
       'Cero frizeo garantizado',
       'Soporte Prioritario WhatsApp'
     ],
@@ -41,8 +42,8 @@ const PLANS = [
     description: 'Todo en 4K Ultra HD. La experiencia completa sin límites.',
     features: [
       '4 Pantallas en 4K Ultra HD',
-      '100+ Canales + Taquilla Completa',
-      'Lidom + PPV + Series Premium',
+      '4,000+ Canales + Todo el Catálogo',
+      'PPV + Series + Películas Premium',
       'Conexión prioritaria sin delay',
       'Soporte 24/7 dedicado'
     ],
